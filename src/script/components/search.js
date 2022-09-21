@@ -8,14 +8,14 @@ class SearchCocktail extends HTMLElement {
         this.render()
     }
 
-    get value() {
+    get valueInput() {
         return this.querySelector('#searchInput').value
     }
 
     render() {
         this.innerHTML = `
             <div class="d-flex justify-content-center py-3" role="search">
-                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search" autocomplete="off"
+                <input class="form-control me-2" type="search" id="searchInput" placeholder="Search for a cocktail ..." aria-label="Search" autocomplete="off"
                     required>
                 <button class="btn btn-outline-primary" id="searchButton" type="submit">Search</button>
             </div>

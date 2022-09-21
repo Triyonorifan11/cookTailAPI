@@ -1,8 +1,15 @@
 class DrinkItem extends HTMLElement {
+    connectedCallback() {
+        this.render()
+    }
 
     set drink(drink) {
         this._drink = drink
         this.render()
+    }
+
+    get valueID() {
+        return this.getAttribute('data-id')
     }
 
     render() {
@@ -21,15 +28,17 @@ class DrinkItem extends HTMLElement {
                                 <p class="card-text">Instruction: ${this._drink.strInstructions}</p>
                                 <p class="card-text">
                                     <small class="text-muted">Last updated on ${this._drink.dateModified}</small>
-                                    <button type="button" class="btn btn-primary btn-sm ms-3" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">info</button>
+                                    <button type="button" class="btn btn-primary btn-sm ms-3 showmodalInfo" id="showmodalInfo" data-bs-toggle="modal"
+                                        data-bs-target="#example" data-id="${this._drink.idDrink}">info</button>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         `
+
     }
 }
 

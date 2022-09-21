@@ -16,14 +16,20 @@ const main = () => {
 
     const onButtonSearchClicked = async () => {
         try {
-            const resultCocktail = await CocktailAPI.searchCoctail(searchInputUser.value)
+            const resultCocktail = await CocktailAPI.searchCoctailByName(searchInputUser.valueInput)
             renderResult(resultCocktail)
         } catch (message) {
             fallBackResult(message)
         }
     }
-
     searchInputUser.eventClick = onButtonSearchClicked;
+
+
+    $('#showmodalInfo').on('click', function () {
+        $('#exampleModalLabel').html('Info Detailss');
+    })
+
+
 }
 
 

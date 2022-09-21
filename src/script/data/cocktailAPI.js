@@ -1,5 +1,5 @@
 class CockTailAPI {
-    static searchCoctail(keyword) {
+    static searchCoctailByName(keyword) {
         return fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${keyword}`)
             .then(response => { return response.json() })
             .then(resposeJSON => {

@@ -8,18 +8,11 @@ class DrinkList extends HTMLElement {
 
     renderError(message) {
         this.innerHTML = `
-            <style>
-                placeholder {
-                    font-weight: lighter;
-                    color: rgba(0, 0, 0, 0.5);
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                }
-            </style>
-        `;
-        this.innerHTML += `<h2 class="placeholder">${message}</h2>`;
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>${message}!</strong> refresh again.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      `;
     }
 
     render() {
