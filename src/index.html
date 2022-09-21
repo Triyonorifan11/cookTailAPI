@@ -11,63 +11,43 @@
 
 <body>
     <header>
-        <nav class="navbar bg-light shadow">
-            <div class="container container-fluid">
-                <a class="navbar-brand">CockTailApp</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                        autofocus="on">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
+        <navbar-app></navbar-app>
+        <img-carousel></img-carousel>
     </header>
 
     <main class="container pt-5">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <div class="card mb-3 shadow-sm">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="https://www.thecocktaildb.com/images/media/drink/uptxtv1468876415.jpg"
-                                class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="d-flex justify-content-center py-2">
+            <h2>Cari Cocktail yang Anda suka</h2>
+        </div>
+
+        <search-element></search-element>
+
+
+        <drink-list class="row d-flex justify-content-center align-item-center"></drink-list>
+
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card mb-3 shadow-sm">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="https://www.thecocktaildb.com/images/media/drink/uptxtv1468876415.jpg"
-                                class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
     <footer>
-        <!-- place footer here -->
+        <my-footer></my-footer>
     </footer>
 
 </body>
