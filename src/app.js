@@ -6,9 +6,9 @@ import './style/style.css';
 import './script/components/navbarApp.js';
 import './script/components/carousel.js';
 import './script/components/myfooter.js';
-import main from './script/view/main.js';
-import './script/components/scriptModal.js';
 
-main()
+import main from './script/view/main.js';
+
+document.addEventListener('DOMContentLoaded', main)
 
 // link API = https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita

@@ -25,11 +25,6 @@ const main = () => {
     searchInputUser.eventClick = onButtonSearchClicked;
 
 
-    $('#showmodalInfo').on('click', function () {
-        $('#exampleModalLabel').html('Info Detailss');
-    })
-
-
 }
 
 
